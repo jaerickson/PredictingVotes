@@ -9,6 +9,7 @@ data = pd.read_csv('condensed_cvr.csv', dtype=str).sample(n=20000, random_state=
 # Set aside some data for testing
 # TODO You have to do this, using train_test_split. Put 20% of the data into the test set.
 # Use 42 as the random number seed.
+train_set, test_set = train_test_split(data,test_size=0.2,train_size=0.8,random_state=42)
 
 # Separate the target column as the label for supervised learning
 # Uncomment one of the two lines below to predict a specific race
